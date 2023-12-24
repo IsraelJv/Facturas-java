@@ -3,7 +3,7 @@ package org.israeljv.appfacturas.modelo;
 public class Product {
     public static int lastCode;
 
-    private int code;
+    private final int code;
     private String name;
     private float price;
 
@@ -19,9 +19,6 @@ public class Product {
         this.price = price;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -29,10 +26,6 @@ public class Product {
 
     public int getCode() {
         return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
     }
 
     @Override

@@ -1,7 +1,6 @@
 package org.israeljv.appfacturas.modelo;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 public class Bill {
@@ -9,11 +8,11 @@ public class Bill {
     public static final int MAX_ITEMS = 12;
     private static int lastIdBill;
 
-    private int idBill;
-    private String description;
-    private Date dateBill;
-    private Customer customer;
-    private ItemBill[] items;
+    private final int idBill;
+    private final String description;
+    private final Date dateBill;
+    private final Customer customer;
+    private final ItemBill[] items;
     private int identifyItems;
 
     public Bill(String description, Customer customer) {
@@ -22,42 +21,6 @@ public class Bill {
         this.items = new ItemBill[MAX_ITEMS];
         this.idBill = ++lastIdBill;
         this.dateBill = new Date();
-    }
-
-    public int getIdBill() {
-        return idBill;
-    }
-
-    public void setIdBill(int idBill) {
-        this.idBill = idBill;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getDateBill() {
-        return dateBill;
-    }
-
-    public void setDateBill(Date dateBill) {
-        this.dateBill = dateBill;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public ItemBill[] getItems() {
-        return items;
     }
 
     public void addItemBill(ItemBill item) {
